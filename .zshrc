@@ -1,24 +1,3 @@
-Last login: Fri Oct 25 23:35:11 on ttys000
-[oh-my-zsh] Would you like to update? [Y/n] y
-Updating Oh My Zsh
-
-master
-
-Features:
-
- - 8da75e3 [buf]       Add completion plugin
- - 7bbebcd [rclone]    Create completion plugin (#12754)
- - 9ae1553 [scw]       Use official scw completion (#12755)
- - a82f6c7 [wd]        Update to f0f47b71 (#12747)
-
-Bug fixes:
-
- - 1b5af71 [pm2]       Update completion
- - eeb01c1 [websearch] Allow multi-word parameters
-
-Documentation:
-
- - 067558d [volta]     Fix typo (#12765)
 # Set Homebrew's bin directory at the beginning of PATH
 if [ -d "/opt/homebrew/bin" ]; then
     export PATH="/opt/homebrew/bin:$PATH"
