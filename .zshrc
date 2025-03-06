@@ -1,11 +1,3 @@
-  1 # Set Homebrew's bin directory at the beginning of PATH
-  2 if [ -d "/opt/homebrew/bin" ]; then
-  3     export PATH="/opt/homebrew/bin:$PATH"
-  4 elif [ -d "/usr/local/bin" ]; then
-  5     export PATH="/usr/local/bin:$PATH"
-  6 fi
-  7
-  8
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -37,31 +29,33 @@ bindkey '^[[B' history-search-forward
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
- 21 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
- 22
- 23 # Uncomment the following line to use case-sensitive completion.
- 24 # CASE_SENSITIVE="true"
- 25
- 26 # Uncomment the following line to use hyphen-insensitive completion.
- 27 # Case-sensitive completion must be off. _ and - will be interchange    able.
- 28 # HYPHEN_INSENSITIVE="true"
- 29
- 30 # Uncomment one of the following lines to change the auto-update beh    avior
- 31 # zstyle ':omz:update' mode disabled  # disable automatic updates
- 32 # zstyle ':omz:update' mode auto      # update automatically without     asking
- 33 # zstyle ':omz:update' mode reminder  # just remind me to update whe    n it's time
- 34
- 35 # Uncomment the following line to change how often to auto-update (i    n days).
- 36 # zstyle ':omz:update' frequency 13
- 37
- 38 # Uncomment the following line if pasting URLs and other text is mes    sed up.
- 39 # DISABLE_MAGIC_FUNCTIONS="true"
- 40
- 41 # Uncomment the following line to disable colors in ls.
- 42 # DISABLE_LS_COLORS="true"
- 43
- 44 # Uncomment the following line to disable auto-setting terminal titl    e.
- 45 # DISABLE_AUTO_TITLE="true"
- 46
-.zshrc                                                20,0-1         Top
-".zshrc" 141L, 5269B
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=$PATH:/Users/joseanmartinez/.spicetify
+
+export PATH="$HOME/.rbenv/shims:$PATH"
+
+# ---- FZF -----
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
+
+# --- setup fzf theme ---
+fg="#CBE0F0"
+bg="#011628"
+bg_highlight="#143652"
+purple="#B388FF"
+blue="#06BCE4"
+cyan="#2CF9ED"
+
+
+
+
+
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+
+export PATH="$PATH:/Users/richard/.dotnet/tools"
